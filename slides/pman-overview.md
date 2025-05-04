@@ -34,7 +34,6 @@ container management: build, deploy, manage containers and images
 - ✅ Docker-compatible CLI
 - ✅ systemd integration via 'quadlets' 
 
-
 <!--
 **🧠 Speaker Notes:**  
 runs containers w/ your privs (better security, reduced attack surface
@@ -42,6 +41,12 @@ docker compatible cli: easy transition
 quadles replaces 'podman generate systemd'
 -->
 ---
+
+## Podman: daemonless architecture
+![](./images/pman-arch.png)
+
+---
+
 
 # Podman vs Docker
 
