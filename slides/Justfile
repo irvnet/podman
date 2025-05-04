@@ -1,0 +1,34 @@
+# Variables
+PRESENTATION := "pman-overview.md"
+OUTPUT_DIR := "dist"
+
+# Show slides in browser with live reload (good for editing)
+#preview:
+#    marp --watch {{PRESENTATION}} --server
+
+# Show presenter view (use with second screen)
+#present:
+#    marp --server {{PRESENTATION}}
+
+# Export to HTML
+export-html:
+    marp {{PRESENTATION}} --html --output {{OUTPUT_DIR}}
+
+# Export to PDF
+#export-pdf:
+#    marp {{PRESENTATION}} --pdf --output {{OUTPUT_DIR}}/presentation.pdf
+
+# Clean outputs
+clean:
+    rm -rf {{OUTPUT_DIR}}
+
+# Create output directory if needed
+#@setup:
+#    mkdir -p {{OUTPUT_DIR}}
+
+# Export all formats
+#export: setup export-html export-pdf
+
+# Preview with presenter view at /?presenter
+#open-presenter:
+#    marp --server {{PRESENTATION}} & sleep 2 && xdg-open http://localhost:8080/?presenter
